@@ -1,5 +1,5 @@
 baseURL = "https://umasoya.github.io/newb.tokyo/"
-languageCode = "en-us"
+languageCode = "ja-JP"
 title = "newb.tokyo"
 theme = "hugo-paper"
 canonifyurls = true
