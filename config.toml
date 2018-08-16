@@ -5,3 +5,6 @@ theme = "hugo-paper"
 canonifyurls = true
 publishDir = "docs"
 hasCJKLanguage = true
+
+[params]
+author = "umasoya"
