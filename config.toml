@@ -4,3 +4,4 @@ title = "newb.tokyo"
 theme = "hugo-paper"
 canonifyurls = true
 publishDir = "docs"
+hasCJKLanguage = true
