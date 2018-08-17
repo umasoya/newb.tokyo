@@ -1,4 +1,4 @@
-baseURL = "https://umasoya.github.io/newb.tokyo/"
+baseURL = "https://newb.tokyo"
 languageCode = "ja-JP"
 title = "newb.tokyo"
 theme = "hugo-paper"
