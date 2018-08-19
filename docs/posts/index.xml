@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on newb.tokyo</title>
+    <link>https://newb.tokyo/posts/</link>
+    <description>Recent content in Posts on newb.tokyo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 17 Aug 2018 03:11:04 +0900</lastBuildDate>
+    
+	<atom:link href="https://newb.tokyo/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chromebook</title>
+      <link>https://newb.tokyo/posts/chromebook/</link>
+      <pubDate>Fri, 17 Aug 2018 03:11:04 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/posts/chromebook/</guid>
+      <description>Macbookが壊れて起動不可能になり、修理に７万かかると言われ安価なChromebook購入を決意しました。 正直なところ、金銭的な余裕が出</description>
+    </item>
+    
+  </channel>
+</rss>

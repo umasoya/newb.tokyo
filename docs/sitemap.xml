@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://umasoya.github.io/newb.tokyo/categories/</loc>
+    <loc>https://newb.tokyo/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://umasoya.github.io/newb.tokyo/tags/</loc>
+    <loc>https://newb.tokyo/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://umasoya.github.io/newb.tokyo/</loc>
+    <loc>https://newb.tokyo/</loc>
     <priority>0</priority>
   </url>
   
