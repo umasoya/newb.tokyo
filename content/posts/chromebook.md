@@ -1,5 +1,5 @@
 ---
-title: "Chromebook"
+title: "Acer Chromebook 14を買った"
 date: 2018-08-20T01:02:41+09:00
 draft: false
 ---
