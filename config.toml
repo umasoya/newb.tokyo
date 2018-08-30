@@ -5,6 +5,7 @@ theme = "hugo-paper"
 canonifyurls = true
 publishDir = "docs"
 hasCJKLanguage = true
+googleAnalytics = "UA-108444633-2"
 
 [params]
 author = "umasoya"
