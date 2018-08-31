@@ -7,9 +7,6 @@
       {{ .Params.author | default .Site.Params.author }} · {{ end }}
       {{- .Date.Format "2006.1.2" -}}
     </p>
-  </header>
-  <div class="post-content">{{ .Content }}</div>
-  <footer class="post-footer">
     {{ if .Params.tags }}
     <ul class="post-tags">
       {{ range .Params.tags }}
@@ -17,7 +14,9 @@
       {{ end }}
     </ul>
     {{ end }}
-  </footer>
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+
   <!-- Comments system area start -->
   {{ if not (eq .Params.comments false) }}
   {{ if .Site.DisqusShortname }}
