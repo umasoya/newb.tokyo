@@ -12,8 +12,8 @@
 		"@import \"variables\";\n@import \"posts\";\n@import \"about\";\n",
 		"// Colors\n$deepdark: #28385E;\n$dark:     #516C8D;\n$blue:     #6A91C1;\n$light:    #CCCCCC;\n\n// Sizing\n$title-size: 50px;\n",
 		".post-view {\n    .post-title {\n        font-size: $title-size;\n    }\n\n    .post-tags {\n        margin: 10px 0 0 !important;\n    }\n}\n",
-		".about {\n    .about-view {\n        width: 700px;\n        margin-left: auto;\n        margin-right: auto;\n        text-align: center;\n    }\n\n    .about-header {\n        font-size: $title-size;\n    }\n}\n"
+		".about {\n    &.about-view {\n        width: 700px;\n        margin-left: auto;\n        margin-right: auto;\n        text-align: center;\n    }\n\n    .about-header {\n        font-size: $title-size;\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": "AEAA,AACI,UADM,CACN,WAAW,CAAC;EACR,SAAS,EDKJ,IAAI,GCJZ;;AAHL,AAKI,UALM,CAKN,UAAU,CAAC;EACP,MAAM,EAAE,mBAAmB,GAC9B;;ACPL,AACI,MADE,CACF,WAAW,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,UAAU,EAAE,MAAM,GACrB;;AANL,AAQI,MARE,CAQF,aAAa,CAAC;EACV,SAAS,EFFJ,IAAI,GEGZ"
+	"mappings": "AEAA,AACI,UADM,CACN,WAAW,CAAC;EACR,SAAS,EDKJ,IAAI,GCJZ;;AAHL,AAKI,UALM,CAKN,UAAU,CAAC;EACP,MAAM,EAAE,mBAAmB,GAC9B;;ACPL,AACI,MADE,AACD,WAAW,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,UAAU,EAAE,MAAM,GACrB;;AANL,AAQI,MARE,CAQF,aAAa,CAAC;EACV,SAAS,EFFJ,IAAI,GEGZ"
 }
