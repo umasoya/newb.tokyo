@@ -48,7 +48,7 @@
     <p class="menuList">
     {{ range $ind,$elm := .Site.Params.menu }}
         <a href="{{ $elm.path }}">{{ $elm.name }}</a>
-        {{ if ne (add 1 $ind) (len $elm) }} &frasl; {{ end }}
+        {{ if ne (add 1 $ind) (len $elm) }}<span class="separator">&frasl;</span>{{ end }}
     {{ end }}
     </p>
   </header>
