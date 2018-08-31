@@ -9,7 +9,3 @@ googleAnalytics = "UA-108444633-2"
 
 [params]
 author = "umasoya"
-
-[permalinks]
-page = "/:filename/"
-about = "/about/"
