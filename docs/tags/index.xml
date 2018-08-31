@@ -6,9 +6,37 @@
     <description>Recent content in Tags on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
+    <lastBuildDate>Mon, 20 Aug 2018 01:02:41 +0900</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chromebook</title>
+      <link>https://newb.tokyo/tags/chromebook/</link>
+      <pubDate>Mon, 20 Aug 2018 01:02:41 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/chromebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>It</title>
+      <link>https://newb.tokyo/tags/it/</link>
+      <pubDate>Mon, 20 Aug 2018 01:02:41 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Review</title>
+      <link>https://newb.tokyo/tags/review/</link>
+      <pubDate>Mon, 20 Aug 2018 01:02:41 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/review/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
