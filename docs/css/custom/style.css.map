@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sourceRoot": "/home/vagrant/newb.tokyo",
+	"sources": [
+		"assets/sass/style.scss",
+		"assets/sass/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables\";\n\n.post-title {\n    text-align: center !important;\n}\n",
+		"// Colors\n$deepdark: #28385E;\n$dark:     #516C8D;\n$blue:     #6A91C1;\n$light:    #CCCCCC;\n"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,WAAW,CAAC;EACR,UAAU,EAAE,iBAAiB,GAChC"
+}
