@@ -4,12 +4,14 @@
 	"sourceRoot": "/home/vagrant/newb.tokyo",
 	"sources": [
 		"assets/sass/style.scss",
-		"assets/sass/_variables.scss"
+		"assets/sass/_variables.scss",
+		"assets/sass/_posts.scss"
 	],
 	"sourcesContent": [
-		"@import \"variables\";\n",
-		"// Colors\n$deepdark: #28385E;\n$dark:     #516C8D;\n$blue:     #6A91C1;\n$light:    #CCCCCC;\n"
+		"@import \"variables\";\n@import \"posts\";\n",
+		"// Colors\n$deepdark: #28385E;\n$dark:     #516C8D;\n$blue:     #6A91C1;\n$light:    #CCCCCC;\n",
+		".post-view {\n    .post-tags {\n        margin: 10px 0 0 !important;\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AEAA,AACI,UADM,CACN,UAAU,CAAC;EACP,MAAM,EAAE,mBAAmB,GAC9B"
 }
