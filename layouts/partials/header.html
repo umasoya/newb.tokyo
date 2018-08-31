@@ -44,5 +44,11 @@
     {{ else }}
     <p class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></p>
     {{ end }}
+
+    <p class="menuList">
+    {{ range .Site.Params.menu }}
+        <a href="{{ .path }}">{{ .name }}</a>
+    {{ end }}
+    </p>
   </header>
   <main class="main">
