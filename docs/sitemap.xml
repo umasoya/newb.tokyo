@@ -13,6 +13,12 @@
   </url>
   
   <url>
+    <loc>https://newb.tokyo/tags/cafe/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://newb.tokyo/categories/</loc>
     <priority>0</priority>
   </url>
@@ -30,6 +36,12 @@
   </url>
   
   <url>
+    <loc>https://newb.tokyo/tags/life/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://newb.tokyo/posts/</loc>
     <lastmod>2018-08-28T01:37:21+09:00</lastmod>
     <priority>0</priority>
@@ -43,12 +55,18 @@
   
   <url>
     <loc>https://newb.tokyo/tags/</loc>
-    <lastmod>2018-08-20T01:02:41+09:00</lastmod>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://newb.tokyo/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/%E7%8C%AB%E3%82%AB%E3%83%95%E3%82%A7/</loc>
     <lastmod>2018-08-28T01:37:21+09:00</lastmod>
     <priority>0</priority>
   </url>
