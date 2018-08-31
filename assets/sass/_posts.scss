@@ -1,4 +1,8 @@
 .post-view {
+    .post-title {
+        font-size: $title-size;
+    }
+
     .post-tags {
         margin: 10px 0 0 !important;
     }
