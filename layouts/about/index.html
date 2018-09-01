@@ -1,9 +1,5 @@
 {{ partial "header.html" . }}
-<article class="about about-view">
-    <header class="about-header">
-        <h1>about this site</h1>
-    </header>
-    <p>This is custom layout!!</p>
-    <div>{{ .Content }}</div>
+<article class="about">
+{{ .Content }}
 </article>
 {{ partial "footer.html" . }}

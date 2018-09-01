@@ -5,7 +5,10 @@
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
+<!-- ClipboardJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script data-no-instant>
+  new ClipboardJS('.btn');
   hljs.initHighlightingOnLoad();
   addMenuListener();
   InstantClick.on('change', function() {

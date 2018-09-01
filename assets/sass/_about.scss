@@ -1,12 +1,21 @@
 .about {
-    &.about-view {
-        width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
+    text-align: center;
 
     .about-header {
-        font-size: $title-size;
+        padding: 10px 0;
+
+        #user_name {
+            font-size: $title-size;
+        }
+    }
+
+    div.icons {
+        justify-content: center;
+        font-size: 1.5rem;
+        color: $blue;
+        a,button {
+            margin: 0 .2rem;
+        }
+        button { color: $blue; }
     }
 }
