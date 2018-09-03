@@ -1,6 +1,2 @@
-let clipboard = new ClipboardJS('.btn');
-
-const btn = document.querySelector('.btn');
-tippy('#nintendo-switch', {
-    trigger: 'click'
-});
+let clipboard = new ClipboardJS('#nintendo-switch');
+tippy('#nintendo-switch', { trigger: 'click' });
