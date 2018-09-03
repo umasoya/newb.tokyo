@@ -18,7 +18,7 @@ draft: false
     <a href="https://twitter.com/zomqyqzvto" target="_brank">
         <i class="fab fa-twitter"></i>
     </a>
-    <button type="button" id="nintendo-switch" class="btn" data-clipboard-text="000000000000" title="フレンドコードをコピーしました[SW-0000-0000-0000]">
+    <button type="button" id="nintendo-switch" class="btn" data-clipboard-text="SW-1510-1283-3250">
         <i class="fab fa-nintendo-switch"></i>
     </button>
 </div>

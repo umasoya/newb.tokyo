@@ -1,2 +1,7 @@
 let clipboard = new ClipboardJS('#nintendo-switch');
-tippy('#nintendo-switch', { trigger: 'click' });
+const friend_code = document.createElement('div');
+friend_code.innerHTML = 'Copied to clipboard<br />【SW-1510-1283-3250】';
+tippy('#nintendo-switch', {
+    trigger: 'click',
+    html: friend_code
+});
