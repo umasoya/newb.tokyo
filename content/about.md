@@ -18,7 +18,7 @@ draft: false
     <a href="https://twitter.com/zomqyqzvto" target="_brank">
         <i class="fab fa-twitter"></i>
     </a>
-    <button type="button" id="nintendo-switch" title="title" class="btn" data-clipboard-text="text copy">
+    <button type="button" id="nintendo-switch" class="btn" data-clipboard-text="text copy" title="text copy">
         <i class="fab fa-nintendo-switch"></i>
     </button>
 </div>
