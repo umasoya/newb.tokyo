@@ -7,7 +7,10 @@ module.exports = {
     watch: false,
     entry: path.resolve(__dirname, "assets/js/app.js"),
     resolve: {
-        modules: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'assets/js')],
+        modules: [
+            'node_modules',
+            path.resolve(__dirname, 'assets/js')
+        ],
         extensions: ['js'],
     },
     output: {

@@ -1,5 +1,8 @@
 'use strict';
 
+import square from './partial/about.js';
+console.log(square(5));
+
 let clipboard = new ClipboardJS('#nintendo-switch');
 const friend_code = document.createElement('div');
 
@@ -8,8 +11,3 @@ tippy('#nintendo-switch', {
     trigger: 'click',
     html: friend_code
 });
-
-let printlog = (txt) => {
-    console.log(txt);
-};
-printlog('babel test');
