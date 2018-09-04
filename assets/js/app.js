@@ -1,4 +1,3 @@
-import "babel-polyfill";
 'use strict';
 
 let clipboard = new ClipboardJS('#nintendo-switch');

@@ -9,9 +9,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <!-- tippy.js -->
 <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
-<!-- app.min.js -->
-{{ $script := resources.Get "js/app.js" | minify }}
-<script src="{{ $script.Permalink }}"></script>
+<!-- app.js -->
+<script src="{{ .Site.BaseURL }}/js/app.js"></script>
 <!-- Google analytics -->
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics_async.html" . }}
