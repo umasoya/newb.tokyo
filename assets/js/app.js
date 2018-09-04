@@ -1,3 +1,6 @@
+import "babel-polyfill";
+'use strict';
+
 let clipboard = new ClipboardJS('#nintendo-switch');
 const friend_code = document.createElement('div');
 friend_code.innerHTML = 'Copied to clipboard<br />【SW-1510-1283-3250】';
