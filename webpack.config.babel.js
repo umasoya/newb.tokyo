@@ -11,7 +11,7 @@ module.exports = {
             'node_modules',
             path.resolve(__dirname, 'assets/js')
         ],
-        extensions: ['js'],
+        extensions: ['.js'],
     },
     output: {
         path: path.resolve(__dirname, "docs/js"),
