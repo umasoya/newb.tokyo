@@ -1,4 +1,5 @@
-import "clipboard";
+import ClipboardJS from "clipboard";
+import tippy from "tippy.js";
 
 const clipboard = new ClipboardJS('#nintendo-switch');
 const friend_cd = document.createElement('div');
