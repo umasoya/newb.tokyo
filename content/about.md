@@ -16,6 +16,10 @@ draft: false
     <a href="https://github.com/umasoya/" target="_brank">
         <i class="fab fa-github"></i>
     </a>
+    <!-- Linkedin -->
+    <a href="https://www.linkedin.com/in/umasoya" target="_brank">
+        <i class="fab fa-linkedin"></i>
+    </a>
     <!-- Twitter -->
     <a href="https://twitter.com/zomqyqzvto" target="_brank">
         <i class="fab fa-twitter"></i>
