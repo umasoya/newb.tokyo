@@ -1,6 +1,5 @@
 import "@babel/polyfill";
-
-const path = require('path');
+import path from 'path';
 
 module.exports = {
     mode: 'production',
@@ -24,11 +23,11 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'eslint-loader'
+                    loader: 'eslint-loader',
+                    options: {
+                        fix: true
+                    }
                 },
-                options: {
-                    fix: true
-                }
             },
             {
                 test: /\.js$/,
