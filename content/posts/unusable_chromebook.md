@@ -1,6 +1,7 @@
 ---
 title: "やっぱChromebookで開発は辛い"
 date: 2018-12-07T10:11:17+09:00
+tags: ["Chromebook", "IT", "review"]
 draft: false
 ---
 
