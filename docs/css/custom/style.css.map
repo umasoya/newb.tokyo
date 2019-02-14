@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/home/hp-souma/newb.tokyo",
+	"sourceRoot": "/home/sywater77/newb.tokyo",
 	"sources": [
 		"assets/sass/style.scss",
 		"assets/sass/_variables.scss",
