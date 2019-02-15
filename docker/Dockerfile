@@ -1,17 +1,11 @@
-FROM golang:1.11.5-alpine AS build
+FROM golang:1.11.5-alpine
 
 ENV HUGO_VERSION 0.54.0
 
-WORKDIR /tmp
-
-RUN apk update && \
-        apk add git gcc libc-dev g++ && \
-        git clone https://github.com/gohugoio/hugo.git
+RUN apk --update --no-cache add git gcc libc-dev g++ && \
+        git clone --depth 1 https://github.com/gohugoio/hugo.git /tmp/hugo
 
 WORKDIR /tmp/hugo
 
-RUN go install --tags extended
-
-FROM golang:1.11.5-alpine
-
-COPY --from=build /go/bin/hugo /go/bin/hugo
+RUN go install --tags extended && \
+        rm -rf /tmp/hugo
