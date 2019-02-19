@@ -63,7 +63,7 @@ jobs:
             git diff --name-only
             git add docs
             git commit -m '[ci skip] build contents by CircleCI'
-            git push --force-with-lease origin master
+            git push origin master
 
 workflows:
   version: 2
