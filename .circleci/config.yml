@@ -21,9 +21,6 @@ jobs:
           command: hugo
       - persist_to_workspace:
           <<: *persist
-          # root: .
-          # paths:
-          #   - docs
 
   webpack:
     docker:
@@ -41,9 +38,6 @@ jobs:
           command: npm run build
       - persist_to_workspace:
           <<: *persist
-        # root: .
-        #  paths:
-        #    - docs
 
   push:
     executor: hugo
@@ -59,7 +53,7 @@ jobs:
             git config user.email "basilisk.0331@icloud.com"
             git add docs
             git commit -m '[CircleCI] new docs'
-            git push --force-with-lease
+            git push --force-with-lease origin master
 
 workflows:
   version: 2
