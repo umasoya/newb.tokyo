@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on newb.tokyo</title>
+    <link>https://newb.tokyo/tags/</link>
+    <description>Recent content in Tags on newb.tokyo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 28 Aug 2018 01:37:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://newb.tokyo/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cafe</title>
+      <link>https://newb.tokyo/tags/cafe/</link>
+      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/cafe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chromebook</title>
+      <link>https://newb.tokyo/tags/chromebook/</link>
+      <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/chromebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>It</title>
+      <link>https://newb.tokyo/tags/it/</link>
+      <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://newb.tokyo/tags/life/</link>
+      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Review</title>
+      <link>https://newb.tokyo/tags/review/</link>
+      <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>猫カフェ</title>
+      <link>https://newb.tokyo/tags/%E7%8C%AB%E3%82%AB%E3%83%95%E3%82%A7/</link>
+      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/%E7%8C%AB%E3%82%AB%E3%83%95%E3%82%A7/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
