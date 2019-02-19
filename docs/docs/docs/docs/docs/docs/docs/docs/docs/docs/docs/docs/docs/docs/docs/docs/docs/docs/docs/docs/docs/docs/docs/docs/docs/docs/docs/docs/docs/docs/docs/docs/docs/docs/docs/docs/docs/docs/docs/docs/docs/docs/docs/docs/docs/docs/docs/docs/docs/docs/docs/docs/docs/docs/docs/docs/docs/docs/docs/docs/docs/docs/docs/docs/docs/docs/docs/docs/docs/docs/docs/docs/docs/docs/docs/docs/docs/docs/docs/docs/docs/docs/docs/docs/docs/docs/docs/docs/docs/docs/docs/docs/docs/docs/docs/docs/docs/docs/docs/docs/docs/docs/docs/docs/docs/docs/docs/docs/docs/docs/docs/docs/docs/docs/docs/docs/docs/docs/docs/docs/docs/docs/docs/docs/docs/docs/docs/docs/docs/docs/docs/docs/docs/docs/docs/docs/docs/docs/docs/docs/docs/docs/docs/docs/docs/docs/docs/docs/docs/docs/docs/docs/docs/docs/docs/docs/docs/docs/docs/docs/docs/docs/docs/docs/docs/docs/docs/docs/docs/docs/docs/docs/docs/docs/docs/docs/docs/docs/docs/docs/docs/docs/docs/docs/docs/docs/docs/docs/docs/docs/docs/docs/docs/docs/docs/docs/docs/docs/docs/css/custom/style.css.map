@@ -1,0 +1,21 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sourceRoot": "/go/src/newb.tokyo",
+	"sources": [
+		"assets/sass/style.scss",
+		"assets/sass/_variables.scss",
+		"assets/sass/_main.scss",
+		"assets/sass/_posts.scss",
+		"assets/sass/_about.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables\";\n@import \"main\";\n@import \"posts\";\n@import \"about\";\n",
+		"// Colors\n$deepdark:   #28385E;\n$dark:       #516C8D;\n$blue:       #6A91C1;\n$light:      #CCCCCC;\n$light-gray: #F9F9F9;\n\n// Sizing\n$title-size: 50px;\n",
+		".menuList {\n    margin-right: 50px;\n    color: $dark;\n\n    .separator {\n        margin: auto 5px;\n    }\n}\n",
+		".post-view {\n    @media screen and (max-width: 700px) {\n        max-width: 700px;\n    }\n    @media screen and (min-width: 701) and (max-width: 819px) {\n        width: 700px;\n    }\n    @media screen and (min-width: 820px) {\n        width: 820px;\n    }\n\n    .post-title {\n        font-size: $title-size;\n    }\n\n    .post-tags {\n        margin: 10px 0 0 !important;\n    }\n}\n",
+		".about {\n    text-align: center;\n\n    .about-header {\n        padding: 10px 0;\n\n        #user_name {\n            font-size: $title-size;\n        }\n    }\n\n    div.icons {\n        justify-content: center;\n        font-size: 1.5rem;\n        color: $blue;\n        a,button {\n            margin: 0 .2rem;\n        }\n        button { color: $blue; }\n    }\n}\n"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,SAAS,CAAC;EACN,YAAY,EAAE,IAAI;EAClB,KAAK,EDAI,OAAO,GCKnB;EAPD,AAII,SAJK,CAIL,UAAU,CAAC;IACP,MAAM,EAAE,QAAQ,GACnB;;ACLD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EADvC,AAAA,UAAU,CAAC;IAEH,SAAS,EAAE,KAAK,GAgBvB;;AAdG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,GAAG,OAAO,SAAS,EAAE,KAAK;EAJ5D,AAAA,UAAU,CAAC;IAKH,KAAK,EAAE,KAAK,GAanB;;AAXG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAPvC,AAAA,UAAU,CAAC;IAQH,KAAK,EAAE,KAAK,GAUnB;;AAlBD,AAWI,UAXM,CAWN,WAAW,CAAC;EACR,SAAS,EFJJ,IAAI,GEKZ;;AAbL,AAeI,UAfM,CAeN,UAAU,CAAC;EACP,MAAM,EAAE,mBAAmB,GAC9B;;ACjBL,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,MAAM,GAmBrB;EApBD,AAGI,MAHE,CAGF,aAAa,CAAC;IACV,OAAO,EAAE,MAAM,GAKlB;IATL,AAMQ,MANF,CAGF,aAAa,CAGT,UAAU,CAAC;MACP,SAAS,EHCR,IAAI,GGAR;EART,AAWI,MAXE,CAWF,GAAG,AAAA,MAAM,CAAC;IACN,eAAe,EAAE,MAAM;IACvB,SAAS,EAAE,MAAM;IACjB,KAAK,EHXA,OAAO,GGgBf;IAnBL,AAeQ,MAfF,CAWF,GAAG,AAAA,MAAM,CAIL,CAAC,EAfT,MAAM,CAWF,GAAG,AAAA,MAAM,CAIH,MAAM,CAAC;MACL,MAAM,EAAE,OAAO,GAClB;IAjBT,AAkBQ,MAlBF,CAWF,GAAG,AAAA,MAAM,CAOL,MAAM,CAAC;MAAE,KAAK,EHfT,OAAO,GGea"
+}
