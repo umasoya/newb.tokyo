@@ -11,8 +11,19 @@ jobs:
     steps:
       - checkout
       - run:
-        name: build html
-        command: hugo
+          name: build html
+          command: hugo
+
+  push:
+    executor: hugo
+    working_directory: /go/src/newb.tokyo
+    steps:
+      - run:
+          name: push new docs
+          command: |
+            git add docs
+            git commit -m '[CircleCI] new docs'
+            git push
 
 workflows:
   version: 2
@@ -23,3 +34,6 @@ workflows:
           branches:
             only:
               - master
+      - push:
+          requires:
+            - build
