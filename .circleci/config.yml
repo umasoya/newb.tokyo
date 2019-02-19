@@ -40,7 +40,8 @@ jobs:
           <<: *persist
 
   push:
-    executor: hugo
+    docker:
+      - image: circleci/node:latest
     working_directory: /go/src/newb.tokyo
     steps:
       - checkout
