@@ -18,6 +18,10 @@ jobs:
           command: |
             npm ci
             npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - docs
 
   webpack:
     docker:
@@ -25,18 +29,26 @@ jobs:
     working_directory: ~/newb.tokyo
     steps:
       - checkout
+      - attach_workspace:
+          at: docs
       - run:
           name: init
           command: npm install
       - run:
           name: build js
           command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - docs
 
   push:
     executor: hugo
     working_directory: /go/src/newb.tokyo
     steps:
       - checkout
+      - attach_workspace:
+          at: docs
       - run:
           name: push new docs
           command: |
