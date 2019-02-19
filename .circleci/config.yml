@@ -23,6 +23,7 @@ jobs:
           root: .
           paths:
             - docs
+            - assets
           # <<: *persist
 
   webpack:
