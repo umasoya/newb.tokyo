@@ -42,7 +42,7 @@ jobs:
   push:
     docker:
       - image: circleci/node:latest
-    working_directory: /go/src/newb.tokyo
+    working_directory: ~/newb.tokyo
     steps:
       - checkout
       - attach_workspace:
