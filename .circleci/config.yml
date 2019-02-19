@@ -22,7 +22,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - docs
           # <<: *persist
 
   webpack:
@@ -42,10 +42,10 @@ jobs:
       - run:
           name: compile sass
           command: npm run sass
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
+      # - persist_to_workspace:
+      #     root: .
+      #     paths:
+      #       - .
           # <<: *persist
 
   push:
