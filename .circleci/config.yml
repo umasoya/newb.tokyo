@@ -20,7 +20,10 @@ jobs:
           name: build html
           command: hugo
       - persist_to_workspace:
-          <<: *persist
+          root: .
+          paths:
+            - .
+          # <<: *persist
 
   webpack:
     docker:
@@ -32,12 +35,18 @@ jobs:
           at: .
       - run:
           name: init
-          command: npm install
+          command: npm ci
       - run:
           name: build js
           command: npm run build
+      - run:
+          name: compile sass
+          command: npm run sass
       - persist_to_workspace:
-          <<: *persist
+          root: .
+          paths:
+            - .
+          # <<: *persist
 
   push:
     docker:
