@@ -1,6 +1,4 @@
-'use strict';
-
-// Liblaries
-import hljs from 'highlight.js';
-// Original
+// highlight.js
+import './partial/hljs.js';
+// clipboard
 import './partial/clipboard';
