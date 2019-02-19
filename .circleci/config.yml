@@ -13,6 +13,11 @@ jobs:
       - run:
           name: build html
           command: hugo
+      - run:
+          name: build js
+          command: |
+            npm ci
+            npm run build
 
   push:
     executor: hugo
