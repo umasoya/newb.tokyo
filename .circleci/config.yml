@@ -13,10 +13,6 @@ jobs:
       - run:
         name: build html
         command: hugo
-    filters:
-      branches:
-        only:
-          - master
 
   push:
     executor: hugo
@@ -35,6 +31,10 @@ workflows:
   build-and-push:
     jobs:
       - build
+    filters:
+      branches:
+        only:
+          - master
       - push:
         requires:
           - build
