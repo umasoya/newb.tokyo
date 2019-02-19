@@ -43,6 +43,10 @@ jobs:
       - run:
           name: compile sass
           command: npm run sass
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
 
   push:
     executor: default
