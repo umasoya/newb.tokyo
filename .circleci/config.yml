@@ -1,4 +1,10 @@
 version: 2.1
+
+persist: &persist
+  root: .
+  paths:
+    - docs
+
 executors:
   hugo:
     docker:
@@ -14,9 +20,10 @@ jobs:
           name: build html
           command: hugo
       - persist_to_workspace:
-          root: .
-          paths:
-            - docs
+          <<: *persist
+          # root: .
+          # paths:
+          #   - docs
 
   webpack:
     docker:
@@ -33,9 +40,10 @@ jobs:
           name: build js
           command: npm run build
       - persist_to_workspace:
-          root: .
-          paths:
-            - docs
+          <<: *persist
+        # root: .
+        #  paths:
+        #    - docs
 
   push:
     executor: hugo
