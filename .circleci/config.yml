@@ -19,6 +19,19 @@ jobs:
             npm ci
             npm run build
 
+  webpack:
+    docker:
+      - image: circleci/node:8.9.1
+    working_directory: ~/newb.tokyo
+    steps:
+      - checkout
+      - run:
+          name: init
+          command: npm ci
+      - run:
+          name: build js
+          command: npm run build
+
   push:
     executor: hugo
     working_directory: /go/src/newb.tokyo
@@ -42,6 +55,12 @@ workflows:
           branches:
             only:
               - master
+      - webpack:
+        filters:
+          branches:
+            only:
+              - master
       - push:
           requires:
             - build
+            - webpack
