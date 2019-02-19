@@ -60,6 +60,7 @@ jobs:
           command: |
             git config user.name "umasoya"
             git config user.email "basilisk.0331@icloud.com"
+            git remote add origin "git@github.com:umasoya/newb.tokyo.git"
             git diff --name-only
             git add docs
             git commit -m '[ci skip] build contents by CircleCI'
