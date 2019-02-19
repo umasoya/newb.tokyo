@@ -13,11 +13,6 @@ jobs:
       - run:
           name: build html
           command: hugo
-      - run:
-          name: build js
-          command: |
-            npm ci
-            npm run build
       - persist_to_workspace:
           root: .
           paths:
