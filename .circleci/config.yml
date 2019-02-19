@@ -71,10 +71,8 @@ workflows:
             only:
               - master
       - webpack:
-        filters:
-          branches:
-            only:
-              - master
+          requires:
+            - build
       - push:
           requires:
             - build
