@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "sass": "node-sass assets/sass/style.scss style.min.css --output-style compressed --output docs/css/custom --source-map",
+    "sass": "node-sass --output-style compressed --output docs/css/custom --source-map true assets/sass/style.scss style.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
