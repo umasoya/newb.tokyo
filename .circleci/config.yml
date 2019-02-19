@@ -7,34 +7,19 @@ executors:
 jobs:
   build:
     executor: hugo
-    working_directory: /home/circleci/go/src/newb.tokyo
+    working_directory: /go/src/newb.tokyo
     steps:
       - checkout
       - run:
         name: build html
         command: hugo
 
-  push:
-    executor: hugo
-    working_directory: /home/circleci/go/src/newb.tokyo
-    steps:
-      - checkout
-      - run:
-        name: push docs
-        command: |
-          git add docs
-          git commit -m 'build by CircleCI'
-          git push origin master
-
 workflows:
   version: 2
-  build-and-push:
+  build-push:
     jobs:
-      - build
-    filters:
-      branches:
-        only:
-          - master
-      - push:
-        requires:
-          - build
+      - build:
+        filters:
+          branches:
+            only:
+              - master
