@@ -53,7 +53,7 @@ jobs:
             git config user.name "umasoya"
             git config user.email "basilisk.0331@icloud.com"
             git add docs
-            git commit -m '[CircleCI] new docs'
+            git commit -m '[ci skip] build contents by CircleCI'
             git push --force-with-lease origin master
 
 workflows:
