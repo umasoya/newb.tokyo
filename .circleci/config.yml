@@ -29,7 +29,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: docs
+          at: .
       - run:
           name: init
           command: npm install
@@ -46,7 +46,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: docs
+          at: .
       - run:
           name: push new docs
           command: |
