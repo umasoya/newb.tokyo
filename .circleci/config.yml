@@ -18,9 +18,12 @@ jobs:
     executor: hugo
     working_directory: /go/src/newb.tokyo
     steps:
+      - checkout
       - run:
           name: push new docs
           command: |
+            git config user.name "umasoya"
+            git config user.email "basilisk.0331@icloud.com"
             git add docs
             git commit -m '[CircleCI] new docs'
             git push
