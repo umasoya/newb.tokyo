@@ -49,8 +49,8 @@ jobs:
     working_directory: ~/newb.tokyo
     steps:
       - checkout
-      # - attach_workspace:
-      #     at: .
+      - attach_workspace:
+          at: .
       - run:
           name: push new docs
           command: |
