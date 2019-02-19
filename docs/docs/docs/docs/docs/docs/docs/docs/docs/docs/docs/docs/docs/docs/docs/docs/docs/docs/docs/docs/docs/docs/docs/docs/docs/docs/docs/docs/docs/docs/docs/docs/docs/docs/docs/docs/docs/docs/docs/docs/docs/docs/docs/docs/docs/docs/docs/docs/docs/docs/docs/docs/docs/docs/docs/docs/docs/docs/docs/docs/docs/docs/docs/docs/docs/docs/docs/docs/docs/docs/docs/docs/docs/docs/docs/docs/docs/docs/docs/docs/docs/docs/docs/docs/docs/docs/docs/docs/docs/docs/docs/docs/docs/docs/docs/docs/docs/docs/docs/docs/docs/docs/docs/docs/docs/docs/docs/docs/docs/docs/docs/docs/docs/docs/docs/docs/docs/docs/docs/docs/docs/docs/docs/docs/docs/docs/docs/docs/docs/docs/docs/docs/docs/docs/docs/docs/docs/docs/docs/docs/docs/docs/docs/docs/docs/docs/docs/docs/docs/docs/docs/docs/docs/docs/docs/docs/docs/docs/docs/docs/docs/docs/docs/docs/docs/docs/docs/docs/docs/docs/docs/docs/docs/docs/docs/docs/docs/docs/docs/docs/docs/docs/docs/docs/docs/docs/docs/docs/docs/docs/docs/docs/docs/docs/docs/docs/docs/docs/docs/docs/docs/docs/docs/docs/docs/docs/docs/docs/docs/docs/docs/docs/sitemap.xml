@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://newb.tokyo/posts/chromebook_is_god/</loc>
+    <lastmod>2019-02-14T14:32:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/unusable_chromebook/</loc>
+    <lastmod>2018-12-07T10:11:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/wsl_environment/</loc>
+    <lastmod>2018-09-13T10:53:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/about/</loc>
+    <lastmod>2018-08-31T16:58:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/cat_cafe/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/chromebook/</loc>
+    <lastmod>2018-08-20T01:02:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/cafe/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/chromebook/</loc>
+    <lastmod>2018-12-07T10:11:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/it/</loc>
+    <lastmod>2018-12-07T10:11:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/life/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/</loc>
+    <lastmod>2019-02-14T14:32:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/review/</loc>
+    <lastmod>2018-12-07T10:11:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/</loc>
+    <lastmod>2019-02-14T14:32:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/%E7%8C%AB%E3%82%AB%E3%83%95%E3%82%A7/</loc>
+    <lastmod>2018-08-28T01:37:21+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
