@@ -21,13 +21,13 @@ jobs:
 
   webpack:
     docker:
-      - image: circleci/node:8.9.1
+      - image: circleci/node:latest
     working_directory: ~/newb.tokyo
     steps:
       - checkout
       - run:
           name: init
-          command: npm ci
+          command: npm install
       - run:
           name: build js
           command: npm run build
