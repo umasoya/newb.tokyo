@@ -9,6 +9,9 @@ executors:
   hugo:
     docker:
       - image: umasoya/hugo
+  default:
+    docker:
+      - image: circleci/node:latest
 
 jobs:
   build:
@@ -22,13 +25,10 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - docs
-            - assets
-          # <<: *persist
+            - .
 
   webpack:
-    docker:
-      - image: circleci/node:latest
+    executor: default
     working_directory: ~/newb.tokyo
     steps:
       - checkout
@@ -43,20 +43,14 @@ jobs:
       - run:
           name: compile sass
           command: npm run sass
-      # - persist_to_workspace:
-      #     root: .
-      #     paths:
-      #       - .
-          # <<: *persist
 
   push:
-    docker:
-      - image: circleci/node:latest
+    executor: default
     working_directory: ~/newb.tokyo
     steps:
       - checkout
-      - attach_workspace:
-          at: .
+      # - attach_workspace:
+      #     at: .
       - run:
           name: push new docs
           command: |
