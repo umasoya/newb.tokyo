@@ -1,10 +1,5 @@
 version: 2.1
 
-persist: &persist
-  root: .
-  paths:
-    - docs
-
 executors:
   hugo:
     docker:
