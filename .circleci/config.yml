@@ -55,7 +55,6 @@ jobs:
           command: |
             git config user.name "umasoya"
             git config user.email "basilisk.0331@icloud.com"
-            git diff --name-only
             git add .
             git commit -m '[ci skip] build contents by CircleCI'
             git push origin master
