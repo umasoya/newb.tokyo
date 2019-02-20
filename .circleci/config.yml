@@ -55,7 +55,7 @@ jobs:
           command: |
             git config user.name "umasoya"
             git config user.email "basilisk.0331@icloud.com"
-            git add .
+            git add docs
             git commit -m '[ci skip] build contents by CircleCI'
             git push origin master
 
