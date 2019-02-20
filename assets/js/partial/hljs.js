@@ -1,5 +1,4 @@
 import hljs from 'highlight.js/lib/highlight';
-import 'highlight.js/styles/solarized-dark.css';
 
 import bash       from 'highlight.js/lib/languages/bash';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
