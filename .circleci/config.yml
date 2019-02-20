@@ -20,7 +20,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - docs
 
   webpack:
     executor: default
@@ -42,7 +42,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - docs
 
   push:
     executor: default
