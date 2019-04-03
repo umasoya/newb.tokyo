@@ -7,9 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "webpack",
-    "sass": "node-sass --output-style compressed --source-map true assets/sass/style.scss docs/css/custom/style.min.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":   "webpack && node-sass --output-style compressed --source-map true assets/sass/style.scss docs/css/custom/style.min.css",
+	"webpack": "webpack",
+    "sass":    "node-sass --output-style compressed --source-map true assets/sass/style.scss docs/css/custom/style.min.css",
+    "test":    "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

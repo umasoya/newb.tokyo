@@ -39,11 +39,8 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: build js
+          name: build and compile
           command: npm run build
-      - run:
-          name: compile sass
-          command: npm run sass
       - run: git diff --name-only
       - persist_to_workspace:
           root: .
