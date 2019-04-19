@@ -1,3 +1,4 @@
+// {{{1 highlight.js
 import hljs from 'highlight.js/lib/highlight';
 
 import bash       from 'highlight.js/lib/languages/bash';
@@ -29,3 +30,10 @@ hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('yaml', yaml);
 
 hljs.initHighlighting();
+// }}}
+
+// {{{1 instantclick
+import InstantClick from 'instantclick';
+
+InstantClick.init();
+// }}}
