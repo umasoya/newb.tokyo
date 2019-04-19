@@ -1,7 +1,7 @@
 /*
 
-highlight.js - default.css
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+Solarized Dark
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
 
 */
 
@@ -9,87 +9,72 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #F0F0F0;
+  background: #002b36;
+  color: #839496;
 }
 
-
-/* Base color: saturation 0; */
-
-.hljs,
-.hljs-subst {
-  color: #444;
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
 }
 
-.hljs-comment {
-  color: #888888;
-}
-
+/* Solarized Green */
 .hljs-keyword,
-.hljs-attribute,
 .hljs-selector-tag,
-.hljs-meta-keyword,
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold;
+.hljs-addition {
+  color: #859900;
 }
 
-
-/* User color: hue: 0 */
-
-.hljs-type,
-.hljs-string,
+/* Solarized Cyan */
 .hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000;
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
 }
 
+/* Solarized Blue */
 .hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold;
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
 }
 
-.hljs-regexp,
-.hljs-symbol,
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
 .hljs-variable,
 .hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #BC6060;
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
 }
 
-
-/* Language color: hue: 90; */
-
-.hljs-literal {
-  color: #78A960;
-}
-
-.hljs-built_in,
+/* Solarized Orange */
+.hljs-symbol,
 .hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300;
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
 }
 
-
-/* Meta color: hue: 200 */
-
-.hljs-meta {
-  color: #1f7199;
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
 }
 
-.hljs-meta-string {
-  color: #4d99bf;
+.hljs-formula {
+  background: #073642;
 }
-
-
-/* Misc effects */
 
 .hljs-emphasis {
   font-style: italic;
