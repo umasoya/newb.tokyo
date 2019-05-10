@@ -10,9 +10,6 @@ executors:
 
 jobs:
   build:
-    branches:
-        only:
-            - master
     executor: hugo
     working_directory: /go/src/newb.tokyo
     steps:
@@ -26,9 +23,6 @@ jobs:
             - docs
 
   webpack:
-    branches:
-        only:
-            - master
     executor: default
     working_directory: ~/newb.tokyo
     steps:
@@ -54,9 +48,6 @@ jobs:
             - docs
 
   push:
-    branches:
-        only:
-            - master
     executor: default
     working_directory: ~/newb.tokyo
     steps:
@@ -77,10 +68,19 @@ workflows:
   build-push:
     jobs:
       - build:
+          filters:
+            branches:
+                only: master
       - webpack:
+          filters:
+            branches:
+                only: master
           requires:
             - build
       - push:
+          filters:
+            branches:
+                only: master
           requires:
             - build
             - webpack
