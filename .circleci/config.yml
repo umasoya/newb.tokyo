@@ -57,12 +57,14 @@ jobs:
       - run:
           name: push new docs
           command: |
-            if [[ ! `git diff --exit-code` ]]; then
-                # git config user.name "umasoya"
-                # git config user.email "basilisk.0331@icloud.com"
+            if [[ `git status --porcelain` ]]; then
+                git config user.name "umasoya"
+                git config user.email "basilisk.0331@icloud.com"
                 git add .
                 git commit -m '[ci skip] build contents by CircleCI'
                 git push origin master
+            else
+                echo "No changes at docs"
             fi
 
 workflows:
