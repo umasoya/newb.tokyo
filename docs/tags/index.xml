@@ -6,19 +6,10 @@
     <description>Recent content in Tags on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 28 Aug 2018 01:37:21 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Feb 2019 14:32:11 +0000</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Cafe</title>
-      <link>https://newb.tokyo/tags/cafe/</link>
-      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
-      
-      <guid>https://newb.tokyo/tags/cafe/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Chromebook</title>
@@ -30,7 +21,7 @@
     </item>
     
     <item>
-      <title>It</title>
+      <title>IT</title>
       <link>https://newb.tokyo/tags/it/</link>
       <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
       
@@ -39,20 +30,29 @@
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://newb.tokyo/tags/life/</link>
-      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
-      
-      <guid>https://newb.tokyo/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Review</title>
+      <title>review</title>
       <link>https://newb.tokyo/tags/review/</link>
       <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
       
       <guid>https://newb.tokyo/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cafe</title>
+      <link>https://newb.tokyo/tags/cafe/</link>
+      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/cafe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://newb.tokyo/tags/life/</link>
+      <pubDate>Tue, 28 Aug 2018 01:37:21 +0900</pubDate>
+      
+      <guid>https://newb.tokyo/tags/life/</guid>
       <description></description>
     </item>
     
