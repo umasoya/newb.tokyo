@@ -57,11 +57,13 @@ jobs:
       - run:
           name: push new docs
           command: |
-            git config user.name "umasoya"
-            git config user.email "basilisk.0331@icloud.com"
-            git add .
-            git commit -m '[ci skip] build contents by CircleCI'
-            git push origin master
+            if [[ ! `git diff --exit-code` ]]; then
+                # git config user.name "umasoya"
+                # git config user.email "basilisk.0331@icloud.com"
+                git add .
+                git commit -m '[ci skip] build contents by CircleCI'
+                git push origin master
+            fi
 
 workflows:
   version: 2
