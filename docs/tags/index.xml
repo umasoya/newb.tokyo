@@ -6,10 +6,37 @@
     <description>Recent content in Tags on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 14 Feb 2019 14:32:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 07:23:37 +0000</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IT</title>
+      <link>https://newb.tokyo/tags/it/</link>
+      <pubDate>Thu, 16 May 2019 07:23:37 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://newb.tokyo/tags/mysql/</link>
+      <pubDate>Thu, 16 May 2019 07:23:37 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>メモ</title>
+      <link>https://newb.tokyo/tags/%E3%83%A1%E3%83%A2/</link>
+      <pubDate>Thu, 16 May 2019 07:23:37 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/%E3%83%A1%E3%83%A2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Chromebook</title>
@@ -17,15 +44,6 @@
       <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
       
       <guid>https://newb.tokyo/tags/chromebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IT</title>
-      <link>https://newb.tokyo/tags/it/</link>
-      <pubDate>Thu, 14 Feb 2019 14:32:11 +0000</pubDate>
-      
-      <guid>https://newb.tokyo/tags/it/</guid>
       <description></description>
     </item>
     
