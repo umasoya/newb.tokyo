@@ -112,7 +112,7 @@ workflows:
           - schedule:
               cron: "0 0 1 */1 *"
               filters:
-                  brances:
+                  branches:
                       only:
                           - master
       jobs:
