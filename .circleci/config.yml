@@ -21,6 +21,25 @@ jobs:
           root: .
           paths:
             - docs
+  npm-check-update:
+      executor: default
+      steps:
+          - checkout
+          - run:
+              name: update packages
+              command: ncu -e
+          - run:
+              name: push new docs
+              command: |
+                if [[ `git status --porcelain` ]]; then
+                    git config user.name "umasoya"
+                    git config user.email "basilisk.0331@icloud.com"
+                    git add .
+                    git commit -m '[ci skip] build contents by CircleCI'
+                    git push origin master
+                else
+                    echo "No changes at packages"
+                fi
 
   webpack:
     executor: default
@@ -88,3 +107,13 @@ workflows:
           requires:
             - build
             - webpack
+  package-update:
+      triggers:
+          - schedule:
+              cron: "0 0 1 */1 *"
+              filters:
+                  brances:
+                      only:
+                          - master
+     jobs:
+         - npm-check-update
