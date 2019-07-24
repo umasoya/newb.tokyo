@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する - newb.tokyo</title>
+  
+  <meta name="description" content="Category,Title,Subtitle という3つのモデルを例にする。 Category &lt;?php class Category extends Eloquent { protected $table = &#39;category&#39;; public function title() { return $this-&gt;hasMany(&#39;Title&#39;); } } Title &lt;?php class Title extends Eloquent { protected $table = &#39;title&#39;; public function subtitle() { return $this-&gt;hasMany(&#39;Subtitle&#39;); } } Subtitle &lt;?php class Subtitle extends Eloquent { protected $table = &#39;subtitle&#39;; } 普通にE">
+  <meta name="author" content="umasoya">
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="https://newb.tokyo/css/style.css" rel="stylesheet">
+  
+  
+  <link href="https://newb.tokyo/css/custom/style.min.css" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" href="https://newb.tokyo/img/apple-touch-icon.png">
+  <link rel="icon" href="https://newb.tokyo//favicon.ico">
+  
+  <meta name="generator" content="Hugo 0.55.5">
+  
+  <link rel="alternate" type="application/atom+xml" href="https://newb.tokyo/index.xml" title="newb.tokyo">
+</head>
+<body class="single">
+  <header class="header">
+    
+    <p class="title"><a href="https://newb.tokyo/">newb.tokyo</a></p>
+    
+
+    <p class="menuList">
+    
+        <a href="https://newb.tokyo/">home</a>
+        <span class="separator">&frasl;</span>
+    
+        <a href="https://newb.tokyo/about/">about</a>
+        
+    
+    </p>
+  </header>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+    <h1 class="post-title">【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する</h1>
+    <p class="post-meta">2019.7.24</p>
+    
+    <ul class="post-tags">
+      
+      <li><a href="https://newb.tokyo//tags/php/">PHP</a></li>
+      
+      <li><a href="https://newb.tokyo//tags/laravel/">Laravel</a></li>
+      
+    </ul>
+    
+  </header>
+  <div class="post-content">
+
+<p>Category,Title,Subtitle という3つのモデルを例にする。</p>
+
+<p><strong>Category</strong></p>
+
+<pre><code class="language-php">&lt;?php
+
+class Category extends Eloquent
+{
+    protected $table = 'category';
+
+    public function title()
+    {
+        return $this-&gt;hasMany('Title');
+    }
+}
+</code></pre>
+
+<p><strong>Title</strong></p>
+
+<pre><code class="language-php">&lt;?php
+
+class Title extends Eloquent
+{
+    protected $table = 'title';
+
+    public function subtitle()
+    {
+        return $this-&gt;hasMany('Subtitle');
+    }
+}
+</code></pre>
+
+<p><strong>Subtitle</strong></p>
+
+<pre><code class="language-php">&lt;?php
+
+class Subtitle extends Eloquent
+{
+    protected $table = 'subtitle';
+}
+</code></pre>
+
+<h2 id="普通にeager-loadする">普通にEager loadする</h2>
+
+<pre><code class="language-php">$result = Category::with('title.subtitle')-&gt;get();
+</code></pre>
+
+<h2 id="title-に-where-を咬ませる">title に where を咬ませる</h2>
+
+<pre><code class="language-php">$result = Category::with(['title' =&gt; function ($query) {
+    $query-&gt;where('title', 'like', '%first%');
+}])-&gt;get();
+</code></pre>
+
+<p>Eager loadingにクエリを追加する場合はこのようにクロージャーを渡せば良い。</p>
+
+<h2 id="title-と-subtitle-の両方にクエリを咬ませたい">title と subtitle の両方にクエリを咬ませたい</h2>
+
+<pre><code class="language-php">$result = Category::with([
+    'title' =&gt; function ($query) {
+        $query-&gt;where('title', 'like', '%first%');
+    },
+    'title.subtitle' =&gt; function ($query) {
+        $query-&gt;where('subtitle', 'like', '%second%');
+    }
+])-&gt;get();
+</code></pre>
+
+<p><code>subtitle</code> にクエリを追加する場合のキー値は <code>subtitle</code> ではなく <code>title.subtitle</code> とする必要がある。</p>
+</div>
+
+  
+  
+  
+  
+  <div class="shares">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="umasoya" data-text="【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する | newb.tokyo" data-lang="ja">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter" title="このエントリーをはてなブックマークに追加">
+        <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+    </a>
+    <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</div>
+
+</article>
+</main>
+<footer class="footer">
+  <span>&copy; 2019 umasoya</span>
+</footer>
+
+<script src="https://newb.tokyo/js/app.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-108444633-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

@@ -52,6 +52,20 @@
 
 <article class="post first-entry">
   <header class="post-header">
+    <h2 class="post-title">【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する</h2>
+  </header>
+  <p class="post-summary">Category,Title,Subtitle という3つのモデルを例にする。 Category &lt;?php class Category extends Eloquent { protected $table = &#39;category&#39;; public function title() { return $this-&gt;hasMany(&#39;Title&#39;); } } Title &lt;?php class Title extends Eloquent { protected $table = &#39;title&#39;; public function subtitle() { return $this-&gt;hasMany(&#39;Subtitle&#39;); } } Subtitle &lt;?php class Subtitle extends Eloquent { protected $table = &#39;subtitle&#39;; } 普通にE...</p>
+  <footer class="post-footer">
+    <p class="post-meta">2019.7.24</p>
+  </footer>
+  <a class="post-link" href="https://newb.tokyo/posts/nested_relation/"></a>
+</article>
+
+
+
+
+<article class="post post-entry">
+  <header class="post-header">
     <h2 class="post-title">MySQLの設定を再起動せず変更する</h2>
   </header>
   <p class="post-summary">SET GLOBAL 変数名=値 or SET @@global.変数名=値 これだけだと再起動したときに設定が消えてしまうので、必ず my.cnf も変更しておく。...</p>

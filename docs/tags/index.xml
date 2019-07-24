@@ -6,10 +6,28 @@
     <description>Recent content in Tags on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 16 May 2019 07:23:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 06:34:31 +0000</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Laravel</title>
+      <link>https://newb.tokyo/tags/laravel/</link>
+      <pubDate>Wed, 24 Jul 2019 06:34:31 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://newb.tokyo/tags/php/</link>
+      <pubDate>Wed, 24 Jul 2019 06:34:31 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/tags/php/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IT</title>

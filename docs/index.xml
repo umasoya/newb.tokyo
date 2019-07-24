@@ -6,10 +6,19 @@
     <description>Recent content on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 16 May 2019 07:23:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 06:34:31 +0000</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する</title>
+      <link>https://newb.tokyo/posts/nested_relation/</link>
+      <pubDate>Wed, 24 Jul 2019 06:34:31 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/posts/nested_relation/</guid>
+      <description>Category,Title,Subtitle という3つのモデルを例にする。 Category &amp;lt;?php class Category extends Eloquent { protected $table = &#39;category&#39;; public function title() { return $this-&amp;gt;hasMany(&#39;Title&#39;); } } Title &amp;lt;?php class Title extends Eloquent { protected $table = &#39;title&#39;; public function subtitle() { return $this-&amp;gt;hasMany(&#39;Subtitle&#39;); } } Subtitle &amp;lt;?php class Subtitle extends Eloquent { protected $table = &#39;subtitle&#39;; } 普通にE</description>
+    </item>
     
     <item>
       <title>MySQLの設定を再起動せず変更する</title>
