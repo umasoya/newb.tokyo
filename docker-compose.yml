@@ -9,5 +9,18 @@ services:
             - node_modules:/newb.tokyo/node_modules
         working_dir: /newb.tokyo
 
+    hugo:
+        build: ./docker/hugo
+        volumes:
+            - .:/newb.tokyo:rw
+        working_dir: /newb.tokyo
+        ports:
+            - 1313:1313
+            - 443:443
+        logging:
+            options:
+                max-size: '100k'
+                max-file: '3'
+
 volumes:
     node_modules:
