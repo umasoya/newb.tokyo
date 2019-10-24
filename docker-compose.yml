@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+    node:
+        image: node:lts-alpine
+        volumes:
+            - .:/newb.tokyo:rw
+            - node_modules:/newb.tokyo/node_modules
+        working_dir: /newb.tokyo
+
+volumes:
+    node_modules:
