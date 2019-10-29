@@ -6,9 +6,9 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <title>MySQLの設定を再起動せず変更する - newb.tokyo</title>
+  <title>hugoをupdateしたらトップページがおかしくなったので直した話 - newb.tokyo</title>
   
-  <meta name="description" content="SET GLOBAL 変数名=値 or SET @@global.変数名=値 これだけだと再起動したときに設定が消えてしまうので、必ず my.cnf も変更しておく。">
+  <meta name="description" content="hugo を 0.55.5 -&gt; 0.59.0 にupdateしたところ、 / や /tags/ などのリスト形式のページの表示がおかしくなっていた。 原因は 0.57.0 で .Pages に publishDir/ 以下のすべてのページが含まれる">
   <meta name="author" content="umasoya">
   
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -44,28 +44,28 @@
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">MySQLの設定を再起動せず変更する</h1>
-    <p class="post-meta">2019.5.16</p>
+    <h1 class="post-title">hugoをupdateしたらトップページがおかしくなったので直した話</h1>
+    <p class="post-meta">2019.10.29</p>
     
     <ul class="post-tags">
       
-      <li><a href="https://newb.tokyo//tags/mysql/">MySQL</a></li>
-      
-      <li><a href="https://newb.tokyo//tags/%E3%83%A1%E3%83%A2/">メモ</a></li>
-      
       <li><a href="https://newb.tokyo//tags/it/">IT</a></li>
+      
+      <li><a href="https://newb.tokyo//tags/golang/">Golang</a></li>
+      
+      <li><a href="https://newb.tokyo//tags/hugo/">hugo</a></li>
       
     </ul>
     
   </header>
-  <div class="post-content"><pre><code class="language-sql">SET GLOBAL 変数名=値
+  <div class="post-content">
 
-or
+<p>hugo を <code>0.55.5</code> -&gt; <code>0.59.0</code> にupdateしたところ、 <code>/</code> や <code>/tags/</code> などのリスト形式のページの表示がおかしくなっていた。<br />
+原因は <code>0.57.0</code> で <code>.Pages</code> に <code>publishDir/</code> 以下のすべてのページが含まれるように変更されたことだった。<a href="https://github.com/gohugoio/hugo/issues/6153">#6153</a></p>
 
-SET @@global.変数名=値
-</code></pre>
+<h2 id="修正方法">修正方法</h2>
 
-<p>これだけだと再起動したときに設定が消えてしまうので、必ず <code>my.cnf</code> も変更しておく。</p>
+<p><code>layout</code> の中で <code>.Pages</code> を使っていた箇所を <code>.Site.RegularPages</code> に書き換える。</p>
 </div>
 
   
@@ -73,7 +73,7 @@ SET @@global.変数名=値
   
   
   <div class="shares">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="umasoya" data-text="MySQLの設定を再起動せず変更する | newb.tokyo" data-lang="ja">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="umasoya" data-text="hugoをupdateしたらトップページがおかしくなったので直した話 | newb.tokyo" data-lang="ja">Tweet</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter" title="このエントリーをはてなブックマークに追加">
