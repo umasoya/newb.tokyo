@@ -2,7 +2,7 @@
 title: "【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する"
 date: 2019-07-24T06:34:31Z
 draft: false
-tags: ["PHP", "Laravel"]
+tags: ["IT", "PHP", "Laravel"]
 ---
 
 Category,Title,Subtitle という3つのモデルを例にする。

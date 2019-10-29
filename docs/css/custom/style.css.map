@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/go/src/newb.tokyo",
+	"sourceRoot": "/newb.tokyo",
 	"sources": [
 		"assets/sass/style.scss",
 		"assets/sass/_hljs.scss",
