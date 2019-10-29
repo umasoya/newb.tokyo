@@ -2,6 +2,7 @@
 title: "WSLでの開発環境"
 date: 2018-09-13T10:53:31+09:00
 draft: false
+tags: ["IT", "Windows", "WSL", "Linux"]
 ---
 
 仕事での開発マシンは`Windows`を使用しているので、

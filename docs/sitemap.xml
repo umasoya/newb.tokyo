@@ -73,6 +73,21 @@
   </url>
   
   <url>
+    <loc>https://newb.tokyo/tags/linux/</loc>
+    <lastmod>2018-09-13T10:53:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/windows/</loc>
+    <lastmod>2018-09-13T10:53:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/tags/wsl/</loc>
+    <lastmod>2018-09-13T10:53:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://newb.tokyo/posts/wsl_environment/</loc>
     <lastmod>2018-09-13T10:53:31+09:00</lastmod>
   </url>

@@ -1,7 +1,7 @@
 ---
 title: "dotfilesの整理 その1"
 date: 2018-09-20T12:11:48+09:00
-tags: ["dotfiles", "terminal", "bash", "zsh", "vim"]
+tags: ["IT", "dotfiles", "terminal", "bash", "zsh", "vim"]
 draft: true
 ---
 
