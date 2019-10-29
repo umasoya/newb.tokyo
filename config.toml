@@ -6,6 +6,8 @@ canonifyurls = true
 publishDir = "docs"
 hasCJKLanguage = true
 googleAnalytics = "UA-108444633-2"
+relativeUrls = true
+staticDir = "docs"
 
 [params]
 author = "umasoya"
