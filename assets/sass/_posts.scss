@@ -1,5 +1,8 @@
 .page-header,
 .post-view {
+    margin-left: auto;
+    margin-right: auto;
+
     @media screen and (max-width: 700px) {
         max-width: 700px;
     }
