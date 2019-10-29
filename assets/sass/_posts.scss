@@ -10,7 +10,7 @@
         width: 700px;
     }
     @media screen and (min-width: 820px) {
-        width: 820px;
+        max-width: 820px;
     }
 
     .post-title {
@@ -19,5 +19,18 @@
 
     .post-tags {
         margin: 10px 0 0 !important;
+    }
+}
+
+.post-entry {
+    @media screen and (max-width: 700px) {
+        max-width: 700px;
+    }
+    @media screen and (min-width: 701px) and (max-width: 819px) {
+        max-width: 700px;
+        width: 700px;
+    }
+    @media screen and (min-width: 820px) {
+        max-width: 820px;
     }
 }
