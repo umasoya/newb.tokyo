@@ -26,6 +26,7 @@
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
     "@babel/register": "^7.6.2",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "babel-loader": "^8.0.6",
     "core-js": "^3.3.3",
     "eslint": "^6.5.1",
