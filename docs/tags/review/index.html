@@ -43,56 +43,117 @@
   <main class="main">
 
 
-<header class="list-header">
-  <span>Tagged in</span>
-  <h1 class="list-title">review</h1>
+
+  <header class="list-header">
+    <span>Tagged in</span>
+    <h1 class="list-title">review</h1>
+    
+  </header>
+
+
+
+
+
   
-</header>
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">【Laravel】ネストしたリレーションをEager loadingするときにクエリを追加する</h2>
+      </header>
+      <p class="post-summary">Category,Title,Subtitle という3つのモデルを例にする。 Category &lt;?php class Category extends Eloquent { protected $table = &#39;category&#39;; public function title() { return $this-&gt;hasMany(&#39;Title&#39;); } } Title &lt;?php class Title extends Eloquent { protected $table = &#39;title&#39;; public function subtitle() { return $this-&gt;hasMany(&#39;Subtitle&#39;); } } Subtitle &lt;?php class Subtitle extends Eloquent { protected $table = &#39;subtitle&#39;; } 普通にE...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2019.7.24</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/nested_relation/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">MySQLの設定を再起動せず変更する</h2>
+      </header>
+      <p class="post-summary">SET GLOBAL 変数名=値 or SET @@global.変数名=値 これだけだと再起動したときに設定が消えてしまうので、必ず my.cnf も変更しておく。...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2019.5.16</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/update_conf_without_restart_mysql/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">ChromebookのLinuxが使えるようになった</h2>
+      </header>
+      <p class="post-summary">ついにChromebookでLinuxがつかえるようになりました。 2018年5月の「Google I/O」にて発表があったものが8月にBeta...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2019.2.14</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/chromebook_is_god/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">やっぱChromebookで開発は辛い</h2>
+      </header>
+      <p class="post-summary">以前、Chromebookが案外悪くないという記事を書いた。 たしかにブラウジングする程度であれば安価だしちゃんと動くのでいい感じだ。 しかし開...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2018.12.7</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/unusable_chromebook/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">WSLでの開発環境</h2>
+      </header>
+      <p class="post-summary">仕事での開発マシンはWindowsを使用しているので、 現在の開発環境をメモ程度に書いておく。 tools category name Terminal Emulator wsl_terminal Terminal Multiplexer tmux Editor neovim VM virtualbox &#43; vagrant Filer NyanFi wsl_terminal WSLで使え...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2018.9.13</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/wsl_environment/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">人生初の猫カフェへ行ってきた</h2>
+      </header>
+      <p class="post-summary">前々から行ってみたいと思っていた猫カフェをついに体験してきた。 行ったのは渋谷にある「猫カフェ MOCHA 渋谷店」。 センター街の少し奥まった場所にあるの...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2018.8.28</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/cat_cafe/"></a>
+    </article>
+  
+    
+      
+    
+    <article class="post post-entry">
+      <header class="post-header">
+        <h2 class="post-title">Acer Chromebook 14を買った</h2>
+      </header>
+      <p class="post-summary">Macbookが壊れて起動不可能になり、修理に７万かかると言われ安価なChromebook購入を決意しました。 正直なところ、金銭的な余裕が出...</p>
+      <footer class="post-footer">
+        <p class="post-meta">2018.8.20</p>
+      </footer>
+      <a class="post-link" href="https://newb.tokyo/posts/chromebook/"></a>
+    </article>
+  
 
-
-
-
-
-
-
-<article class="post post-entry">
-  <header class="post-header">
-    <h2 class="post-title">ChromebookのLinuxが使えるようになった</h2>
-  </header>
-  <p class="post-summary">ついにChromebookでLinuxがつかえるようになりました。 2018年5月の「Google I/O」にて発表があったものが8月にBeta...</p>
-  <footer class="post-footer">
-    <p class="post-meta">2019.2.14</p>
-  </footer>
-  <a class="post-link" href="https://newb.tokyo/posts/chromebook_is_god/"></a>
-</article>
-
-
-
-
-<article class="post post-entry">
-  <header class="post-header">
-    <h2 class="post-title">やっぱChromebookで開発は辛い</h2>
-  </header>
-  <p class="post-summary">以前、Chromebookが案外悪くないという記事を書いた。 たしかにブラウジングする程度であれば安価だしちゃんと動くのでいい感じだ。 しかし開...</p>
-  <footer class="post-footer">
-    <p class="post-meta">2018.12.7</p>
-  </footer>
-  <a class="post-link" href="https://newb.tokyo/posts/unusable_chromebook/"></a>
-</article>
-
-
-
-
-<article class="post post-entry">
-  <header class="post-header">
-    <h2 class="post-title">Acer Chromebook 14を買った</h2>
-  </header>
-  <p class="post-summary">Macbookが壊れて起動不可能になり、修理に７万かかると言われ安価なChromebook購入を決意しました。 正直なところ、金銭的な余裕が出...</p>
-  <footer class="post-footer">
-    <p class="post-meta">2018.8.20</p>
-  </footer>
-  <a class="post-link" href="https://newb.tokyo/posts/chromebook/"></a>
-</article>
 
 
 

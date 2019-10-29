@@ -9,7 +9,7 @@
   </header>
 {{ end }}
 
-{{ $paginator := .Paginate (where .Pages "Type" "posts") (index .Site.Params "paginate" | default 10) }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") (index .Site.Params "paginate" | default 10) }}
 
 {{ if gt $paginator.TotalPages 0 }}
   {{ range $index, $page := $paginator.Pages }}
