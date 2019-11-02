@@ -29,7 +29,25 @@ hljs.registerLanguage('vim', vim);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('yaml', yaml);
 
+/**
+ * Applies highlighting to a DOM node containing inline code.
+ */
+hljs.highlightInline = function () {
+    var elements = document.getElementsByTagName("code");
+    var l=elements.length;
+    for (var i = 0; i < l; i++) {
+        var elm = elements[i];
+        if(elm.parentNode.tagName.toLowerCase() != "pre") {
+            elm.style.display = "inline";
+            elm.style.margin  = "0 2px";
+            elm.style.padding = "1px 3px";
+            elm.classList.add('hljs');
+        }
+    }
+};
+
 hljs.initHighlighting();
+hljs.highlightInline();
 // }}}
 
 // {{{1 instantclick
