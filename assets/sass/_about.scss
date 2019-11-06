@@ -1,4 +1,5 @@
 .about {
+
     text-align: center;
 
     .about-header {
@@ -18,4 +19,9 @@
         }
         button { color: $blue; }
     }
+}
+
+article#profile,
+article#tech-stack {
+    height: calc(100vh - $header-height);
 }

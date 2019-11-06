@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
-<article class="about">
-{{ .Content }}
-</article>
+
+{{ partial "about/profile.html" . }}
+
+{{ partial "about/tech-stack.html" . }}
+
 {{ partial "footer.html" . }}

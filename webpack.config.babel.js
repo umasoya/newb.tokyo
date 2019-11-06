@@ -13,7 +13,7 @@ module.exports = {
         extensions: ['.js'],
     },
     output: {
-        path: path.resolve(__dirname, "static/js"),
+        path: path.resolve(__dirname, "docs/js"),
         filename: 'app.js'
     },
     module: {

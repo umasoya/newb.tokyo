@@ -4,10 +4,10 @@ title = "newb.tokyo"
 theme = "hugo-paper"
 canonifyurls = true
 publishDir = "docs"
+staticDir = "docs"
 hasCJKLanguage = true
 googleAnalytics = "UA-108444633-2"
 relativeUrls = true
-staticDir = "static"
 
 [params]
 author = "umasoya"
