@@ -36,6 +36,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "highlight.js": "^9.15.10"
+    "highlight.js": "^9.15.10",
+    "scroll-out": "^2.2.7"
   }
 }

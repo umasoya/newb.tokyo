@@ -1,6 +1,8 @@
-// {{{1 highlight.js
-import hljs from 'highlight.js/lib/highlight';
+import '@fortawesome/fontawesome-free/js/all';
+import InstantClick from 'instantclick';
+import ScrollOut    from 'scroll-out';
 
+import hljs       from 'highlight.js/lib/highlight';
 import bash       from 'highlight.js/lib/languages/bash';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import go         from 'highlight.js/lib/languages/go';
@@ -14,6 +16,8 @@ import sql        from 'highlight.js/lib/languages/sql';
 import vim        from 'highlight.js/lib/languages/vim';
 import xml        from 'highlight.js/lib/languages/xml';
 import yaml       from 'highlight.js/lib/languages/yaml';
+
+/* {{{1 highlight.js */
 
 hljs.registerLanguage('sh', bash);
 hljs.registerLanguage('dockerfile', dockerfile);
@@ -48,14 +52,34 @@ hljs.highlightInline = function () {
 
 hljs.initHighlighting();
 hljs.highlightInline();
-// }}}
 
-// {{{1 instantclick
-import InstantClick from 'instantclick';
+/* }}} */
 
+/**
+ * instantclick
+ */
 InstantClick.init();
-// }}}
 
-// {{1 fontawesome
-import '@fortawesome/fontawesome-free/js/all';
-// }}
+/* {{{1 ScrollOut */
+
+ScrollOut({
+    threshold: .2,
+    onShown: elm => {
+        elm.style.opacity = 1;
+        elm.animate({
+            opacity: [0, 1],
+        }, 1000);
+    },
+    onHidden: elm => {
+        elm.animate({
+            opacity: [1, 0],
+        }, 1000);
+    },
+    onChange: (elm, ctx) => {
+        if (!ctx.visible) {
+            elm.style.opacity = 0;
+        }
+    },
+});
+
+/* }}} */

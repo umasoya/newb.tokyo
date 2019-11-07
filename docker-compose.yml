@@ -6,7 +6,7 @@ services:
         image: node:lts-alpine
         volumes:
             - .:/newb.tokyo:rw
-            - node_modules:/newb.tokyo/node_modules
+            - node_modules:/newb.tokyo/node_modules:rw
         working_dir: /newb.tokyo
 
     hugo:

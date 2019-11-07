@@ -36,6 +36,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" href="{{.Site.BaseURL}}index.xml" title="{{ .Site.Title }}">
 </head>
+
 <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
   <header class="header">
     {{ if .IsHome }}
@@ -51,4 +52,4 @@
     {{ end }}
     </p>
   </header>
-  <main class="main">
+  <main class="main {{ if eq .Title `about` }}about{{ end }}">
