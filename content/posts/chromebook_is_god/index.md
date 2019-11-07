@@ -14,7 +14,7 @@ draft: false
 設定のLinux（ベータ版）のところにある `有効化`ボタンをクリックすると有効化されます。
 ※ 画像は有効化後の設定画面です。
 
-![screenshot](/img/chromebook_enable_linux.png)
+![screenshot](./screenshot.png)
 
 しばらく放置しておくとターミナルアプリが追加されるのでそれを実行するとBashが起動してLinuxが操作できます。
 
