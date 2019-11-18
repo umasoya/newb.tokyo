@@ -24,7 +24,7 @@ Google Cloud Platform(GCP)が提供しているGoogle版のEC2。
 ブートディスクの「変更」をクリック。OSは何でもいいので「CentOS8」を選択。サイズは30GBまで無料で使えるのでMAXの30GBに設定。  
 「HTTPトラフィックを許可する/HTTPSトラフィックを許可する」を有効にして「作成」をクリック。
 
-## 外部IPアドレス予約
+### 外部IPアドレス予約
 
 画面左のメニューから「VPCネットワーク」→「外部IPアドレス」を選択。
 「静的アドレスを予約をクリック」。  
@@ -32,16 +32,42 @@ Google Cloud Platform(GCP)が提供しているGoogle版のEC2。
 接続先が「なし」のままだと課金されるらしいので注意。  
 「予約」をクリック。
 
-## google-cloud-sdk をインストール
+### google-cloud-sdk をインストール
 
 [公式の手順](https://cloud.google.com/sdk/downloads)に従ってインストール。  
 そこそこのサイズがあるのか15分ほどかかった。  
 
 インストールが終了したら `gcloud init` でSDKの初期設定を行う。
 
-## SSH鍵の登録
+### SSH鍵の登録
 
-画面左のメニューから「Computer Engine」→「VMインスタンス」を選択。  
-インスタンスをクリックして詳細画面に移動。  
-「編集」をクリックして編集画面に移動。  
-下の方にSSHキーの項目があるので `ssh-keygen` で作成した公開鍵を入力して「保存」をクリック。
+gcloudコマンドは長いので普通にsshコマンドで接続できるようにSSH鍵を登録しておく。  
+画面左のメニューから「Computer Engine」→「メタデータ」を選択。  
+「SSH認証鍵」をクリックして「編集」をクリック。  
+「項目を追加」で `ssh-keygen` で作成した公開鍵を入力して「保存」をクリック。  
+
+次に `~/.ssh/config` に設定を追記して `ssh gcp` で接続できるようにする。  
+IPアドレスは「Computer Engine」→「VMインスタンス」で表示されている「外部IP」を入力する。
+
+```config
+Host gcp
+  HostName [IPアドレス]
+  IdentityFile path/to/identity-file
+```
+
+## crowiのインストール
+
+### yum update
+
+`sudo yum -y update`
+
+### node.js
+
+`sudo yum install -y nodejs`
+
+### docker
+
+手順は[この記事](https://qiita.com/dora_2562/items/24691d3bec4c99c1d794)を参考にさせてもらった。  
+書いてあるとおりに実行していけば問題なくインストールできる。
+
+docker-compose は `pip` でインストール。  
