@@ -2,6 +2,7 @@
 title: "GCEにcrowiを立てる"
 date: 2019-11-14T03:03:59Z
 draft: true
+tags: ["IT", "GCP", "GCE", "crowi"]
 ---
 
 GCEのalways free枠を使って自分用のwikiを作ったのでそのメモ。  
@@ -49,7 +50,7 @@ gcloudコマンドは長いので普通にsshコマンドで接続できるよ�
 次に `~/.ssh/config` に設定を追記して `ssh gcp` で接続できるようにする。  
 IPアドレスは「Computer Engine」→「VMインスタンス」で表示されている「外部IP」を入力する。
 
-```config
+```
 Host gcp
   HostName [IPアドレス]
   IdentityFile path/to/identity-file
@@ -71,3 +72,39 @@ Host gcp
 書いてあるとおりに実行していけば問題なくインストールできる。
 
 docker-compose は `pip` でインストール。  
+
+### git
+
+素のままだと `git` すらないのでインストールする。
+
+```sh
+sudo yum groupinstall "Development Tools"
+sudo yum install curl-devel expat-devel gettext-devel openssl-devel  perl-CPAN perl-devel zlib-devel
+```
+
+## crowi を docker-compose で建てる
+
+ようやくcrowiサーバーを建てる。  
+~個人用なので公式のリポジトリの中にある `docker-compose.development.yml` をちょこちょこっと書き換えて終わり。~  
+.env を用意して自分の環境用に書き換える。
+
+```sh
+git clone https://github.com/crowi/crowi.git
+cd crowi
+cp docker-compose.development.yml docker-compose.yml
+cp .env.sample .env
+```
+
+.env は以下のように書き換える
+
+```
+# PORT=3000
+PORT=80
+# なんか適当に書き換える
+# PASSWORD_SEED="yourpasswordseed"
+# NODE_ENV="development"
+NODE_ENV="production"
+```
+
+これで `docker-compose up -d` で終わりのはずだったが、メモリが足りず途中で失敗する。  
+
