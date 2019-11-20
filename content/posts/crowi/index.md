@@ -106,5 +106,33 @@ PORT=80
 NODE_ENV="production"
 ```
 
-これで `docker-compose up -d` で終わりのはずだったが、メモリが足りず途中で失敗する。  
+準備が整ったので `docker-compose build` をするもメモリ不足で kill されたのでスワップ領域を設定する。  
+まずは現状の確認。
 
+```sh
+free -t -h
+              total        used        free      shared  buff/cache   available
+Mem:          577Mi       289Mi        68Mi       7.0Mi       219Mi       190Mi
+Swap:            0B          0B          0B
+Total:        577Mi       289Mi        68Mi
+```
+
+スワップファイルを作成する。
+
+```sh
+sudo dd if=/dev/zero of=/var/swap bs=1M count=1024
+sudo mkswap /car/swap
+sudo swapon /var/swap
+```
+
+とりあえず1GB追加。
+
+```sh
+free -t -h
+              total        used        free      shared  buff/cache   available
+Mem:          577Mi       288Mi        38Mi       7.0Mi       249Mi       190Mi
+Swap:         1.0Gi          0B       1.0Gi
+Total:        1.6Gi       288Mi       1.0Gi
+```
+
+swap に 1GB追加されているのが確認できた。
