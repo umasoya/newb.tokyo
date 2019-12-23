@@ -21,22 +21,23 @@
   },
   "homepage": "https://github.com/umasoya/newb.tokyo#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "eslint": "^6.5.1",
-    "eslint-loader": "^3.0.2",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "highlight.js": "^9.17.1",
     "instantclick": "^3.1.0",
+    "npm-check-updates": "^4.0.1",
     "path": "^0.12.7",
     "plumber": "^0.4.8",
+    "scroll-out": "^2.2.7",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.3",
+    "typescript": "^3.7.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "webpack-stream": "^5.2.1"
-  },
-  "dependencies": {
-    "highlight.js": "^9.15.10",
-    "scroll-out": "^2.2.7"
   }
 }
