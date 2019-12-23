@@ -10,7 +10,7 @@ const paths = {
 };
 
 gulp.task('webpack', () => {
-    return gulp.src()
+    return gulp.src(paths.js.src)
         .pipe(webpack(require('./webpack.config.js')))
         .pipe(gulp.dest(paths.js.dest))
         .pipe(browserSync.stream())
