@@ -1,8 +1,7 @@
-import "@babel/polyfill";
-import path from 'path';
+const path = require('path');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     watch: false,
     entry: path.resolve(__dirname, "assets/js/app.js"),
     resolve: {
@@ -10,17 +9,17 @@ module.exports = {
             'node_modules',
             path.resolve(__dirname, 'assets/js')
         ],
-        extensions: ['.js'],
+        extensions: ['.ts', '.js'],
     },
     output: {
-        path: path.resolve(__dirname, "static/js"),
+        path: path.resolve(__dirname, "doc/js"),
         filename: 'app.js'
     },
     module: {
         rules: [
             {
                 enforce: "pre",
-                test: /\.js$/,
+                test: /\.(js|ts)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'eslint-loader',
@@ -30,11 +29,8 @@ module.exports = {
                 },
             },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                test: /\.ts$/,
+                loader: 'ts-loader',
             }
         ]
     }
