@@ -14,6 +14,10 @@
  */
 module.exports = {
     "files": [ 'docs/**/*.(css|js|html)' ],
-    "proxy": false,
     "port": 1313,
+    "ui": false,
+    "server": {
+        "baseDir": "docs",
+        "index": "index.html",
+    }
 };
