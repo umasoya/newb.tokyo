@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     watch: false,
-    entry: path.resolve(__dirname, "assets/js/app.js"),
+    entry: path.resolve(__dirname, "assets/js/app.ts"),
     resolve: {
         modules: [
             'node_modules',
