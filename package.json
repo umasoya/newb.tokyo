@@ -1,27 +1,11 @@
 {
-  "name": "newb.tokyo",
-  "version": "1.0.0",
-  "description": "umasoya's blog",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/umasoya/newb.tokyo.git"
-  },
-  "author": "umasoya",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/umasoya/newb.tokyo/issues"
-  },
-  "homepage": "https://github.com/umasoya/newb.tokyo#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
+    "@types/highlight.js": "^9.12.3",
+    "@types/node": "^13.1.0",
     "browser-sync": "^2.26.7",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
@@ -33,11 +17,10 @@
     "instantclick": "^3.1.0",
     "npm-check-updates": "^4.0.1",
     "path": "^0.12.7",
-    "plumber": "^0.4.8",
     "scroll-out": "^2.2.7",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.4",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "webpack-stream": "^5.2.1"
   }
