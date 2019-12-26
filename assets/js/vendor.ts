@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "@fortawesome/fontawesome-free/js/all";
 import InstantClick = require("instantclick");
 import ScrollOut = require("scroll-out");
@@ -16,6 +17,8 @@ import sql = require("highlight.js/lib/languages/sql");
 import vim = require("highlight.js/lib/languages/vim");
 import xml = require("highlight.js/lib/languages/xml");
 import yaml = require("highlight.js/lib/languages/yaml");
+
+/* eslint-enable */
 
 /* {{{1 highlight.js */
 
