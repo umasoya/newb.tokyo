@@ -1,2 +1,2 @@
 // libraries
-import './vendor.js';
+import "./vendor.ts";
