@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Windows Terminalが正式リリースされたので使ってみた - newb.tokyo</title>
+  
+  <meta name="description" content="Microsoft Store からインストール 設定は以下のファイルに書いていく。 %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\setting.json デフォルトの起動を Windows Power Shell から WSL(Ubuntu) に変更 defaultProfile にプロファイルのguid を指定するとそれがデフ">
+  <meta name="author" content="umasoya">
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  
+  
+  <link href="https://newb.tokyo/css/app.min.css" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+  <link rel="icon" href="../../img/favicon.ico">
+  
+  <meta name="generator" content="Hugo 0.59.0">
+  
+  <link rel="alternate" type="application/atom+xml" href="https://newb.tokyo/index.xml" title="newb.tokyo">
+</head>
+
+<body class="single">
+  <header class="header">
+    
+    <p class="title"><a href="https://newb.tokyo/">newb.tokyo</a></p>
+    
+
+    <p class="menuList">
+    
+        <a href="../../">home</a>
+        <span class="separator">&frasl;</span>
+    
+        <a href="../../about/">about</a>
+        
+    
+    </p>
+  </header>
+  <main class="main ">
+
+<article class="post post-view">
+  <header class="post-header">
+    <h1 class="post-title">Windows Terminalが正式リリースされたので使ってみた</h1>
+    <p class="post-meta">2020.5.21</p>
+    
+  </header>
+  <div class="post-content">
+
+<p>Microsoft Store からインストール</p>
+
+<p>設定は以下のファイルに書いていく。
+<code>%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\setting.json</code></p>
+
+<h2 id="デフォルトの起動を-windows-power-shell-から-wsl-ubuntu-に変更">デフォルトの起動を Windows Power Shell から WSL(Ubuntu) に変更</h2>
+
+<p><code>defaultProfile</code> にプロファイルのguid を指定するとそれがデフォルトで起動するようになる。</p>
+
+<p>guid は <code>list</code>の中にかかれているのでそれをコピペ</p>
+
+<pre><code class="language-json">{
+    // WSLのguid
+    &quot;defaultProfile&quot;: &quot;{2c4de342-38b7-51cf-b940-2309a097f518}&quot;
+}
+</code></pre>
+
+<h2 id="起動時のディレクトリをwslのホームディレクトリに変更">起動時のディレクトリをWSLのホームディレクトリに変更</h2>
+
+<p>そのままだと  <code>%USERPROFILE%</code> が開くので起動時のコマンドで <code>~</code> を指定する。</p>
+
+<pre><code class="language-json">{
+    &quot;profiles&quot;:
+      &quot;list&quot;: [
+        {
+          &quot;guid&quot;: &quot;{2c4de342-38b7-51cf-b940-2309a097f518}&quot;,
+        &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;Ubuntu&quot;,
+                &quot;source&quot;: &quot;Windows.Terminal.Wsl&quot;,
+        &quot;commandline&quot;: &quot;wsl.exe ~ -d Ubuntu&quot;
+      }
+    ]
+}
+</code></pre>
+
+<h2 id="見た目をカスタマイズ">見た目をカスタマイズ</h2>
+
+<p>プロファイルに以下のプロパティを追記する。</p>
+
+<p>全プロファイルで共通の設定は <code>defaults</code> に記述する。</p>
+
+<table>
+<thead>
+<tr>
+<th>プロパティ</th>
+<th>説明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>backgroundImage</td>
+<td><code>string</code> <br />背景画像のパス</td>
+</tr>
+
+<tr>
+<td>backgroundOpacity</td>
+<td><code>number</code> <br />背景画像の透過度 0～1の間で調整<br />※うまく適用されなかった</td>
+</tr>
+
+<tr>
+<td>colorSchema</td>
+<td><code>string</code> <br /><code>schema</code>配列で自分で定義したものかデフォルトで入っているものを指定<br /><a href="https://docs.microsoft.com/ja-jp/windows/terminal/customize-settings/color-schemes">https://docs.microsoft.com/ja-jp/windows/terminal/customize-settings/color-schemes</a></td>
+</tr>
+
+<tr>
+<td>useAcrylic</td>
+<td><code>boolean</code> <br />後ろに別ウィンドウがあったら透過する</td>
+</tr>
+
+<tr>
+<td>fontFace</td>
+<td><code>string</code> <br />フォントを指定</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-json">{
+    &quot;profiles&quot;:
+      &quot;defaults&quot;:
+      {
+        &quot;colorSchema&quot;: &quot;Solarized Dark&quot;,
+        &quot;useAcrylic&quot;: false,
+        &quot;fontFace&quot;: &quot;Migu 1M&quot;
+    },
+      &quot;list&quot;: [
+        {
+          ...,
+          &quot;backgroundImage&quot;: &quot;path\\to\\image&quot;,
+          &quot;backgroundOpacity&quot;: 0.5,
+          ...
+      }
+    ]
+}
+</code></pre>
+
+<p>フォントは長年windows環境で愛用している <a href="https://mix-mplus-ipa.osdn.jp/migu/">Migu 1M</a> を使用。</p>
+
+<h2 id="キーバインド">キーバインド</h2>
+
+<pre><code class="language-json">{
+    &quot;keybindings&quot;:
+    [
+        // split pane
+        { &quot;command&quot;: { &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;vertical&quot; }, &quot;keys&quot;: &quot;alt+|&quot; },
+        { &quot;command&quot;: { &quot;sction&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;horizontal&quot; }, &quot;keys&quot;: &quot;alt+-&quot; },
+        
+        // move pane
+    { &quot;command&quot;: { &quot;action&quot;: &quot;moveFocus&quot;, &quot;direction&quot;: &quot;left&quot; }, &quot;keys&quot;: &quot;alt+h&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;moveFocus&quot;, &quot;direction&quot;: &quot;down&quot; }, &quot;keys&quot;: &quot;alt+j&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;moveFocus&quot;, &quot;direction&quot;: &quot;up&quot; }, &quot;keys&quot;: &quot;alt+k&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;moveFocus&quot;, &quot;direction&quot;: &quot;right&quot; }, &quot;keys&quot;: &quot;alt+l&quot; },
+        
+        // resize pane
+        { &quot;command&quot;: { &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;left&quot; }, &quot;keys&quot;: &quot;alt+left&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;down&quot; }, &quot;keys&quot;: &quot;alt+down&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;up&quot; }, &quot;keys&quot;: &quot;alt+up&quot; },
+        { &quot;command&quot;: { &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;right&quot; }, &quot;keys&quot;: &quot;alt+right&quot; },
+        
+        // find
+        { &quot;command&quot;: &quot;find&quot;, &quot;keys&quot;: &quot;alt+f },
+        
+        // close pane
+        { &quot;command&quot;: &quot;closePane&quot;, &quot;keys&quot;: &quot;alt+q&quot; }
+    ]
+}
+</code></pre>
+
+<h1 id="感想">感想</h1>
+
+<p>これ1つでWSL、cmd、Windows Power Shell 等を使えるのはかなり便利。</p>
+
+<p>今まで <code>tmux</code> を使って画面分割していたけどもう不要かもしれない。</p>
+
+<h1 id="参考">参考</h1>
+
+<ul>
+<li><p><a href="https://qiita.com/hideki0145/items/04582a26baf3d81632c1">Windows Terminalをカスタマイズしよう！(Preview v0.11.1121.0版)</a></p></li>
+
+<li><p><a href="https://docs.microsoft.com/ja-jp/windows/terminal/get-started">公式ドキュメント</a></p></li>
+</ul>
+</div>
+
+  
+  
+  
+  
+  <div class="shares">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="umasoya" data-text="Windows Terminalが正式リリースされたので使ってみた | newb.tokyo" data-lang="ja">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter" title="このエントリーをはてなブックマークに追加">
+        <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+    </a>
+    <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</div>
+
+</article>
+</main>
+<footer class="footer">
+  <span>&copy; 2020 umasoya</span>
+</footer>
+
+<script src="https://newb.tokyo/js/app.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-108444633-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
+

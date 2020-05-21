@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://newb.tokyo/</loc>
+    <lastmod>2020-05-21T04:37:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/</loc>
+    <lastmod>2020-05-21T04:37:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://newb.tokyo/posts/windows_terminal/</loc>
+    <lastmod>2020-05-21T04:37:10+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://newb.tokyo/tags/golang/</loc>
     <lastmod>2019-10-29T15:00:17+00:00</lastmod>
   </url>
@@ -19,16 +34,6 @@
   
   <url>
     <loc>https://newb.tokyo/tags/it/</loc>
-    <lastmod>2019-10-29T15:00:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://newb.tokyo/</loc>
-    <lastmod>2019-10-29T15:00:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://newb.tokyo/posts/</loc>
     <lastmod>2019-10-29T15:00:17+00:00</lastmod>
   </url>
   

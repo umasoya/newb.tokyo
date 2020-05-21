@@ -6,10 +6,19 @@
     <description>Recent content on newb.tokyo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 29 Oct 2019 15:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 04:37:10 +0000</lastBuildDate>
     
 	<atom:link href="https://newb.tokyo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows Terminalが正式リリースされたので使ってみた</title>
+      <link>https://newb.tokyo/posts/windows_terminal/</link>
+      <pubDate>Thu, 21 May 2020 04:37:10 +0000</pubDate>
+      
+      <guid>https://newb.tokyo/posts/windows_terminal/</guid>
+      <description>Microsoft Store からインストール 設定は以下のファイルに書いていく。 %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\setting.json デフォルトの起動を Windows Power Shell から WSL(Ubuntu) に変更 defaultProfile にプロファイルのguid を指定するとそれがデフ</description>
+    </item>
     
     <item>
       <title>hugoをupdateしたらトップページがおかしくなったので直した話</title>
